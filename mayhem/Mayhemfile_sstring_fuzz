@@ -1,0 +1,9 @@
+project: savantenvs/seastar
+target: sstring_fuzz
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/sstring_fuzz/testsuite
+cmds:
+  - cmd: /mayhem/sstring_fuzz
+    libfuzzer: true
+    timeout: 10
