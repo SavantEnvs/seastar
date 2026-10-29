@@ -1,0 +1,9 @@
+project: savantenvs/seastar
+target: http_chunk_parsers_fuzz
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/http_chunk_parsers_fuzz/testsuite
+cmds:
+  - cmd: /mayhem/http_chunk_parsers_fuzz
+    libfuzzer: true
+    timeout: 10
