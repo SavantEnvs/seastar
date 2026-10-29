@@ -1,0 +1,9 @@
+project: savantenvs/seastar
+target: url_decode_fuzz
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/url_decode_fuzz/testsuite
+cmds:
+  - cmd: /mayhem/url_decode_fuzz
+    libfuzzer: true
+    timeout: 10
